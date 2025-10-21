@@ -1,0 +1,158 @@
+{
+  "pontuacao_acoes": {
+    "tempo_site_5min": 10,
+    "analise_completa": 250,
+    "favoritar_produto": 10,
+    "comentar_blog": 20,
+    "comprar_produto": 1,
+    "contratar_profissional": 500,
+    "ativar_notificacoes": 50,
+    "completar_treino": 100,
+    "streak_7_dias": 200,
+    "convidar_amigo": 300,
+    "primeira_compra": 500,
+    "review_produto": 25
+  },
+  "niveis": [
+    {
+      "nivel": "Bronze",
+      "pontos_min": 0,
+      "pontos_max": 999,
+      "cor": "#CD7F32",
+      "icone": "🥉",
+      "beneficios": ["Badge Bronze", "Acesso básico"]
+    },
+    {
+      "nivel": "Prata", 
+      "pontos_min": 1000,
+      "pontos_max": 2499,
+      "cor": "#C0C0C0",
+      "icone": "🥈",
+      "beneficios": ["Badge Prata", "5% desconto loja"]
+    },
+    {
+      "nivel": "Ouro",
+      "pontos_min": 2500,
+      "pontos_max": 4999, 
+      "cor": "#FFD700",
+      "icone": "🥇",
+      "beneficios": ["Badge Ouro", "10% desconto loja", "Suporte prioritário"]
+    },
+    {
+      "nivel": "Diamante",
+      "pontos_min": 5000,
+      "pontos_max": 9999,
+      "cor": "#B9F2FF",
+      "icone": "💎",
+      "beneficios": ["Badge Diamante", "15% desconto loja", "Acesso antecipado", "Chat prioritário"]
+    },
+    {
+      "nivel": "Legend",
+      "pontos_min": 10000,
+      "pontos_max": 999999,
+      "cor": "#FF6B6B",
+      "icone": "👑",
+      "beneficios": ["Badge Lendário", "20% desconto loja", "Produtos exclusivos", "Suporte VIP"]
+    }
+  ],
+  "badges": [
+    {
+      "id": "primeiro_treino",
+      "nome": "Primeiro Passo",
+      "descricao": "Completou seu primeiro treino",
+      "icone": "👟",
+      "raridade": "comum"
+    },
+    {
+      "id": "analise_completa",
+      "nome": "Autoconhecimento",
+      "descricao": "Completou a auto-análise",
+      "icone": "🧠",
+      "raridade": "comum"
+    },
+    {
+      "id": "streak_7",
+      "nome": "Disciplinado",
+      "descricao": "7 dias seguidos no app",
+      "icone": "🔥",
+      "raridade": "raro"
+    },
+    {
+      "id": "social_starter",
+      "nome": "Social Starter",
+      "descricao": "Adicionou primeiro amigo",
+      "icone": "👥",
+      "raridade": "comum"
+    },
+    {
+      "id": "elite_member", 
+      "nome": "Membro Elite",
+      "descricao": "Ativou o modo Elite",
+      "icone": "⭐",
+      "raridade": "lendario"
+    },
+    {
+      "id": "compra_primeira",
+      "nome": "Primeira Compra",
+      "descricao": "Realizou primeira compra na loja",
+      "icone": "🛒",
+      "raridade": "raro"
+    }
+  ],
+  "missoes": [
+    {
+      "id": "m_001",
+      "nome": "Conhece-te a Ti Mesmo",
+      "descricao": "Complete sua auto-análise",
+      "objetivo": "Completar análise completa",
+      "pontos": 250,
+      "tipo": "unica",
+      "progresso_atual": 0,
+      "progresso_total": 1
+    },
+    {
+      "id": "m_002", 
+      "nome": "Explorador da Loja",
+      "descricao": "Favorite 5 produtos diferentes",
+      "objetivo": "Adicionar 5 produtos aos favoritos",
+      "pontos": 100,
+      "tipo": "unica",
+      "progresso_atual": 0,
+      "progresso_total": 5
+    },
+    {
+      "id": "m_003",
+      "nome": "Mente Sã, Corpo São",
+      "descricao": "Passe 30 minutos navegando hoje",
+      "objetivo": "Tempo no site",
+      "pontos": 50,
+      "tipo": "diaria",
+      "progresso_atual": 0,
+      "progresso_total": 30
+    },
+    {
+      "id": "m_004",
+      "nome": "Socializar é Preciso",
+      "descricao": "Adicione 3 amigos",
+      "objetivo": "Conectar com outros usuários",
+      "pontos": 200,
+      "tipo": "unica",
+      "progresso_atual": 0,
+      "progresso_total": 3
+    }
+  ],
+  "tabuleiro": {
+    "casas": [
+      {"id": 1, "nome": "Início", "tipo": "inicio", "icone": "🏁"},
+      {"id": 2, "nome": "Primeira Análise", "tipo": "missao", "icone": "📊", "recompensa": 250},
+      {"id": 3, "nome": "Descanso", "tipo": "neutro", "icone": "😴"},
+      {"id": 4, "nome": "Loja Descoberta", "tipo": "missao", "icone": "🛍️", "recompensa": 100},
+      {"id": 5, "nome": "Boost de Energia", "tipo": "bonus", "icone": "⚡", "recompensa": 150},
+      {"id": 6, "nome": "Primeiro Treino", "tipo": "missao", "icone": "💪", "recompensa": 200},
+      {"id": 7, "nome": "Checkpoint Bronze", "tipo": "nivel", "icone": "🥉"},
+      {"id": 8, "nome": "Social Connect", "tipo": "missao", "icone": "👥", "recompensa": 180},
+      {"id": 9, "nome": "Preguiça", "tipo": "penalidade", "icone": "🐌", "penalidade": -50},
+      {"id": 10, "nome": "Streak Master", "tipo": "missao", "icone": "🔥", "recompensa": 300}
+    ]
+  }
+}

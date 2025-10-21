@@ -1,0 +1,129 @@
+[
+  {
+    "id": "u_001",
+    "nome": "Ana Silva",
+    "email": "ana@muscle.com",
+    "senha": "123456",
+    "cep": "13165-000",
+    "cidade": "Engenheiro Coelho",
+    "estado": "SP",
+    "avatar": "💪",
+    "pontos": 1250,
+    "nivel": "Bronze",
+    "streak": 7,
+    "preferencias": {
+      "elite": false,
+      "notify": {
+        "whatsapp": "+5511999999999",
+        "email": true,
+        "push": true
+      },
+      "tema": "light"
+    },
+    "favoritos": ["p_01", "p_15", "p_23"],
+    "carrinho": [
+      {"produtoId": "p_05", "qtd": 2, "tamanho": "M", "cor": "preta"}
+    ],
+    "amigos": ["u_002", "u_003"],
+    "analises": [
+      {
+        "id": "a_01",
+        "data": "2025-10-15",
+        "respostas": {
+          "objetivo": "hipertrofia",
+          "ambiente": "academia",
+          "dias_semana": 5,
+          "tempo_sessao": "45-60",
+          "nivel": "intermediario"
+        },
+        "resultado": {
+          "tipo": "treino_academia_hipertrofia",
+          "divisao": "ABCDE",
+          "observacoes": "Foco em compostos + isolados"
+        }
+      }
+    ],
+    "planos_salvos": ["t_01", "d_02"],
+    "pedidos": ["o_001", "o_002"],
+    "ranking": {
+      "global": 250,
+      "brasil": 90,
+      "sp": 30,
+      "cidade": 5,
+      "amigos": 2
+    },
+    "badges": ["primeiro_treino", "analise_completa", "streak_7"],
+    "historico_pontos": [
+      {"data": "2025-10-20", "acao": "tempo_site_5min", "pontos": 10},
+      {"data": "2025-10-19", "acao": "analise_completa", "pontos": 250},
+      {"data": "2025-10-18", "acao": "favoritar_produto", "pontos": 10}
+    ]
+  },
+  {
+    "id": "u_002", 
+    "nome": "Carlos Mendes",
+    "email": "carlos@muscle.com",
+    "senha": "123456",
+    "cep": "01310-100",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "avatar": "⚡",
+    "pontos": 2847,
+    "nivel": "Prata",
+    "streak": 12,
+    "preferencias": {
+      "elite": true,
+      "notify": {
+        "whatsapp": "+5511888888888",
+        "email": true,
+        "push": true
+      },
+      "tema": "dark"
+    },
+    "favoritos": ["p_02", "p_08", "p_12", "p_30"],
+    "carrinho": [],
+    "amigos": ["u_001", "u_003"],
+    "ranking": {
+      "global": 125,
+      "brasil": 45,
+      "sp": 15,
+      "cidade": 3,
+      "amigos": 1
+    },
+    "badges": ["elite_member", "streak_10", "compra_primeira", "social_butterfly"]
+  },
+  {
+    "id": "u_003",
+    "nome": "Maria Santos",
+    "email": "maria@muscle.com", 
+    "senha": "123456",
+    "cep": "20040-020",
+    "cidade": "Rio de Janeiro",
+    "estado": "RJ",
+    "avatar": "🔥",
+    "pontos": 890,
+    "nivel": "Bronze",
+    "streak": 3,
+    "preferencias": {
+      "elite": false,
+      "notify": {
+        "whatsapp": "+5521777777777",
+        "email": false,
+        "push": true
+      }
+    },
+    "favoritos": ["p_03", "p_07"],
+    "carrinho": [
+      {"produtoId": "p_01", "qtd": 1, "tamanho": "P", "cor": "azul"}
+    ],
+    "amigos": ["u_001", "u_002"],
+    "ranking": {
+      "global": 892,
+      "brasil": 334,
+      "rj": 45,
+      "cidade": 12,
+      "amigos": 3
+    },
+    "badges": ["primeira_analise", "social_starter"]
+  }
+]

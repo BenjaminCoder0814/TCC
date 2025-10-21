@@ -1,0 +1,102 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Whey Protein Gold Standard",
+      "price": 137.94,
+      "originalPrice": 229.90,
+      "discount": 40,
+      "image": "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=400&h=400&fit=crop",
+      "category": "suplementos",
+      "brand": "optimum",
+      "rating": 5,
+      "reviews": 15847,
+      "isNew": false,
+      "description": "O suplemento mais vendido do mundo com 40% OFF!"
+    },
+    {
+      "id": 2,
+      "name": "Nike Air Zoom SuperRep 3",
+      "price": 399.90,
+      "originalPrice": 499.90,
+      "discount": 20,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+      "category": "tenis",
+      "brand": "nike",
+      "rating": 4.8,
+      "reviews": 1234,
+      "isNew": true,
+      "description": "Novo tênis para treino funcional com tecnologia Zoom Air!"
+    },
+    {
+      "id": 3,
+      "name": "Creatina Growth 300g",
+      "price": 45.90,
+      "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=400&fit=crop",
+      "category": "suplementos",
+      "brand": "growth",
+      "rating": 4.7,
+      "reviews": 892,
+      "description": "Creatina pura para máximo desempenho nos treinos"
+    },
+    {
+      "id": 4,
+      "name": "Halteres Ajustáveis 20kg",
+      "price": 299.90,
+      "image": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=400&h=400&fit=crop",
+      "category": "equipamentos",
+      "brand": "generica",
+      "rating": 4.5,
+      "reviews": 456,
+      "description": "Par de halteres ajustáveis para treino em casa"
+    },
+    {
+      "id": 5,
+      "name": "BCAA 2:1:1 Integral Médica",
+      "price": 89.90,
+      "originalPrice": 120.00,
+      "discount": 25,
+      "image": "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=400&h=400&fit=crop",
+      "category": "suplementos",
+      "brand": "integralmedica",
+      "rating": 4.6,
+      "reviews": 2341,
+      "description": "Aminoácidos essenciais para recuperação muscular"
+    },
+    {
+      "id": 6,
+      "name": "Camiseta Dri-FIT Nike",
+      "price": 79.90,
+      "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop",
+      "category": "roupas",
+      "brand": "nike",
+      "rating": 4.4,
+      "reviews": 876,
+      "description": "Camiseta respirável para treinos intensos"
+    }
+  ],
+  "profissionais": [
+    {
+      "id": 1,
+      "nome": "Dr. Carlos Eduardo",
+      "especialidade": "Personal Trainer",
+      "experiencia": "8 anos",
+      "avaliacao": 4.9,
+      "avaliacoes": 234,
+      "preco": "R$ 80/hora",
+      "foto": "https://randomuser.me/api/portraits/men/32.jpg",
+      "disponivel": true
+    },
+    {
+      "id": 2,
+      "nome": "Dra. Ana Paula Silva",
+      "especialidade": "Nutricionista",
+      "experiencia": "6 anos",
+      "avaliacao": 4.8,
+      "avaliacoes": 189,
+      "preco": "R$ 120/consulta",
+      "foto": "https://randomuser.me/api/portraits/women/44.jpg",
+      "disponivel": true
+    }
+  ]
+}

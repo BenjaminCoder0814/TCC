@@ -1,0 +1,88 @@
+[
+  {
+    "id": "chat_001",
+    "participantes": ["u_001", "pr_001"],
+    "tipo": "profissional",
+    "titulo": "Consulta Nutricional - Dr. Carlos",
+    "ultimo_update": "2025-10-20T14:30:00Z",
+    "nao_lidas": 2,
+    "mensagens": [
+      {
+        "id": "msg_001",
+        "remetente": "pr_001",
+        "conteudo": "Olá Ana! Vi sua análise e gostaria de fazer algumas perguntas sobre seus hábitos alimentares atuais.",
+        "timestamp": "2025-10-20T10:00:00Z",
+        "tipo": "texto",
+        "lida": true
+      },
+      {
+        "id": "msg_002", 
+        "remetente": "u_001",
+        "conteudo": "Oi Dr. Carlos! Claro, pode perguntar. Estou ansiosa para começar!",
+        "timestamp": "2025-10-20T10:05:00Z",
+        "tipo": "texto",
+        "lida": true
+      },
+      {
+        "id": "msg_003",
+        "remetente": "pr_001",
+        "conteudo": "Quantas refeições você faz por dia atualmente?",
+        "timestamp": "2025-10-20T14:25:00Z",
+        "tipo": "texto",
+        "lida": false
+      },
+      {
+        "id": "msg_004",
+        "remetente": "pr_001",
+        "conteudo": "E qual seu horário preferido para treinar?",
+        "timestamp": "2025-10-20T14:30:00Z", 
+        "tipo": "texto",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id": "chat_002",
+    "participantes": ["u_001", "u_002"],
+    "tipo": "amigo",
+    "titulo": "Carlos Mendes",
+    "ultimo_update": "2025-10-20T09:15:00Z",
+    "nao_lidas": 0,
+    "mensagens": [
+      {
+        "id": "msg_005",
+        "remetente": "u_002",
+        "conteudo": "Oi Ana! Viu que subimos no ranking essa semana? 🔥",
+        "timestamp": "2025-10-20T09:00:00Z",
+        "tipo": "texto",
+        "lida": true
+      },
+      {
+        "id": "msg_006",
+        "remetente": "u_001", 
+        "conteudo": "Sim!! Consegui +250 pontos com a análise. E você, como conseguiu tantos pontos?",
+        "timestamp": "2025-10-20T09:15:00Z",
+        "tipo": "texto",
+        "lida": true
+      }
+    ]
+  },
+  {
+    "id": "chat_003",
+    "participantes": ["u_001", "entregador_001"],
+    "tipo": "entregador",
+    "titulo": "Entregador - Pedido #O_001",
+    "ultimo_update": "2025-10-20T16:45:00Z",
+    "nao_lidas": 1,
+    "mensagens": [
+      {
+        "id": "msg_007",
+        "remetente": "entregador_001",
+        "conteudo": "Olá! Estou a caminho com seu pedido. Chego em aproximadamente 15 minutos! 📦",
+        "timestamp": "2025-10-20T16:45:00Z",
+        "tipo": "texto",
+        "lida": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "plano_free",
+    "nome": "MUSCLE FREE",
+    "tipo": "gratuito",
+    "preco": 0,
+    "preco_anual": 0,
+    "descricao": "Comece sua jornada fitness gratuitamente",
+    "cor_tema": "gray",
+    "popular": false,
+    "beneficios": [
+      "Auto-análise básica (1x por mês)",
+      "Treinos básicos para casa",
+      "Acesso ao blog",
+      "Ranking público",
+      "Sistema de pontos básico",
+      "Suporte por email"
+    ],
+    "limitacoes": [
+      "Máximo 3 treinos salvos",
+      "Sem análise nutricional",
+      "Sem chat com profissionais",
+      "Anúncios na plataforma"
+    ],
+    "recursos": {
+      "analises_mes": 1,
+      "treinos_salvos": 3,
+      "chat_profissionais": false,
+      "analise_nutricional": false,
+      "suporte": "email",
+      "anuncios": true
+    }
+  },
+  {
+    "id": "plano_plus",
+    "nome": "MUSCLE PLUS",
+    "tipo": "plus",
+    "preco": 29.90,
+    "preco_anual": 299.90,
+    "descricao": "Acelere seus resultados com recursos premium",
+    "cor_tema": "blue",
+    "popular": true,
+    "beneficios": [
+      "Auto-análise completa (ilimitada)",
+      "Treinos personalizados casa + academia",
+      "Planos nutricionais básicos", 
+      "Chat com profissionais (5 msgs/mês)",
+      "Sem anúncios",
+      "Desconto 10% na loja",
+      "Ranking premium",
+      "Suporte prioritário"
+    ],
+    "limitacoes": [
+      "Chat limitado com profissionais",
+      "Consultas não inclusas"
+    ],
+    "recursos": {
+      "analises_mes": "ilimitado",
+      "treinos_salvos": "ilimitado", 
+      "chat_profissionais": 5,
+      "analise_nutricional": "basica",
+      "desconto_loja": 10,
+      "suporte": "prioritario",
+      "anuncios": false
+    }
+  },
+  {
+    "id": "plano_pro",
+    "nome": "MUSCLE PRO", 
+    "tipo": "pro",
+    "preco": 59.90,
+    "preco_anual": 599.90,
+    "descricao": "Para quem busca resultados profissionais",
+    "cor_tema": "purple",
+    "popular": false,
+    "beneficios": [
+      "Tudo do Muscle Plus",
+      "Chat ilimitado com profissionais",
+      "1 consulta mensal gratuita",
+      "Análise corporal completa",
+      "Planos nutricionais avançados",
+      "Desconto 15% na loja",
+      "Acesso beta a novos recursos",
+      "Suporte 24h por WhatsApp"
+    ],
+    "limitacoes": [
+      "Sem modo Elite"
+    ],
+    "recursos": {
+      "analises_mes": "ilimitado",
+      "treinos_salvos": "ilimitado",
+      "chat_profissionais": "ilimitado", 
+      "consultas_mensais": 1,
+      "analise_nutricional": "completa",
+      "desconto_loja": 15,
+      "suporte": "24h",
+      "anuncios": false,
+      "recursos_beta": true
+    }
+  },
+  {
+    "id": "plano_elite",
+    "nome": "MUSCLE ELITE",
+    "tipo": "elite", 
+    "preco": 149.90,
+    "preco_anual": 1499.90,
+    "descricao": "Experiência premium exclusiva",
+    "cor_tema": "gold",
+    "popular": false,
+    "beneficios": [
+      "Tudo do Muscle Pro",
+      "Modo Elite (tema luxo)",
+      "Concierge fitness pessoal",
+      "Consultas ilimitadas",
+      "Personal trainer virtual IA",
+      "Produtos exclusivos Elite",
+      "Desconto 25% na loja", 
+      "Frete grátis ilimitado",
+      "Suporte concierge 24h",
+      "Acesso antecipado a tudo"
+    ],
+    "limitacoes": [],
+    "recursos": {
+      "analises_mes": "ilimitado",
+      "treinos_salvos": "ilimitado",
+      "chat_profissionais": "ilimitado",
+      "consultas_mensais": "ilimitado",
+      "analise_nutricional": "premium",
+      "desconto_loja": 25,
+      "frete_gratis": true,
+      "suporte": "concierge",
+      "anuncios": false,
+      "modo_elite": true,
+      "produtos_exclusivos": true,
+      "personal_ia": true
+    }
+  }
+]

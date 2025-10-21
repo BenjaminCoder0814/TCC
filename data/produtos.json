@@ -1,0 +1,491 @@
+[
+  {
+    "id": "p_01",
+    "slug": "camiseta-muscle-dryfit-preta",
+    "nome": "Camiseta Muscle Dry-Fit",
+    "categoria": "Vestuário",
+    "marca": "Muscle Levels",
+    "preco": 99.90,
+    "precoPromocional": 79.90,
+    "descricao": "Camiseta de alta performance com tecnologia dry-fit para treinos intensos. Tecido antibacteriano e secagem rápida.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500",
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500"
+    ],
+    "variacoes": {
+      "tamanhos": ["PP", "P", "M", "G", "GG", "XGG"],
+      "cores": ["preta", "branca", "azul-marinho", "cinza"]
+    },
+    "avaliacao": 4.8,
+    "reviews": 127,
+    "tags": ["promo", "novo", "bestseller"],
+    "categoria_seo": "vestuario-fitness",
+    "estoque": 45,
+    "peso": 150,
+    "caracteristicas": ["Dry-fit", "Antibacteriano", "Proteção UV", "Respirável"],
+    "pontos_compra": 7990
+  },
+  {
+    "id": "p_02",
+    "slug": "whey-protein-premium-chocolate",
+    "nome": "Whey Protein Premium Chocolate 2kg",
+    "categoria": "Suplementos",
+    "marca": "Muscle Nutrition",
+    "preco": 189.90,
+    "precoPromocional": 149.90,
+    "descricao": "Proteína isolada de soro do leite com 30g de proteína por dose. Sabor chocolate belga premium com zero lactose.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=500",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500"
+    ],
+    "variacoes": {
+      "sabores": ["chocolate", "baunilha", "morango", "cookies-cream", "banana"],
+      "tamanhos": ["900g", "1.8kg", "3kg"]
+    },
+    "avaliacao": 4.9,
+    "reviews": 1247,
+    "tags": ["promo", "bestseller", "premium", "zero-lactose"],
+    "categoria_seo": "suplementos-proteina",
+    "estoque": 89,
+    "peso": 2000,
+    "caracteristicas": ["30g Proteína/dose", "Zero Lactose", "Isolado + Concentrado", "BCAA Natural", "Digestão Rápida"],
+    "pontos_compra": 14990
+  },
+  {
+    "id": "p_03",
+    "slug": "tenis-nike-training-revolution",
+    "nome": "Tênis Nike Training Revolution 6",
+    "categoria": "Calçados",
+    "marca": "Nike",
+    "preco": 399.90,
+    "precoPromocional": 299.90,
+    "descricao": "Tênis de treino com tecnologia Nike Air para máximo conforto e performance. Design moderno e durável.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+    ],
+    "variacoes": {
+      "numeros": ["38", "39", "40", "41", "42", "43", "44", "45"],
+      "cores": ["preto-branco", "azul-navy", "vermelho", "cinza-escuro"]
+    },
+    "avaliacao": 4.7,
+    "reviews": 856,
+    "tags": ["promo", "nike", "training", "conforto"],
+    "categoria_seo": "calcados-treino",
+    "estoque": 67,
+    "peso": 850,
+    "caracteristicas": ["Nike Air", "Sola Antiderrapante", "Mesh Respirável", "Suporte Lateral", "Durabilidade"],
+    "pontos_compra": 29990
+  },
+  {
+    "id": "p_04",
+    "slug": "creatina-creapure-300g",
+    "nome": "Creatina Creapure® 300g",
+    "categoria": "Suplementos",
+    "marca": "Muscle Science",
+    "preco": 129.90,
+    "precoPromocional": 89.90,
+    "descricao": "Creatina monohidratada Creapure® - a mais pura do mundo. Aumenta força, potência e volume muscular.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=500",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500"
+    ],
+    "variacoes": {
+      "tamanhos": ["300g", "500g", "1kg"]
+    },
+    "avaliacao": 4.8,
+    "reviews": 2156,
+    "tags": ["promo", "creapure", "cientificamente-comprovado", "bestseller"],
+    "categoria_seo": "suplementos-creatina",
+    "estoque": 234,
+    "peso": 300,
+    "caracteristicas": ["100% Creapure®", "Sem Sabor", "Micronizada", "Pureza Alemã", "Certificada"],
+    "pontos_compra": 8990
+  },
+  {
+    "id": "p_05",
+    "slug": "kit-elasticos-premium",
+    "nome": "Kit Elásticos Premium 11 Peças",
+    "categoria": "Equipamentos",
+    "marca": "Muscle Gear",
+    "preco": 149.90,
+    "precoPromocional": 99.90,
+    "descricao": "Kit completo com 5 elásticos de diferentes resistências, alças, âncora de porta e guia de exercícios.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500",
+      "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=500"
+    ],
+    "variacoes": {
+      "cores": ["colorido", "preto", "azul-cinza"]
+    },
+    "avaliacao": 4.6,
+    "reviews": 987,
+    "tags": ["promo", "kit-completo", "casa", "viagem"],
+    "categoria_seo": "equipamentos-casa",
+    "estoque": 156,
+    "peso": 800,
+    "caracteristicas": ["11 Peças", "5 Resistências", "Âncora Porta", "Guia Exercícios", "Portátil"],
+    "pontos_compra": 9990
+  },
+  {
+    "id": "p_06",
+    "slug": "pre-treino-explosive",
+    "nome": "Pré-Treino Explosive Energy 300g",
+    "categoria": "Suplementos",
+    "marca": "Muscle Energy",
+    "preco": 119.90,
+    "precoPromocional": null,
+    "descricao": "Fórmula avançada com 300mg de cafeína, beta-alanina, citrulina e taurina para máxima energia e foco.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500"
+    ],
+    "variacoes": {
+      "sabores": ["frutas-vermelhas", "limao-siciliano", "uva", "maracuja"],
+      "tamanhos": ["300g", "450g"]
+    },
+    "avaliacao": 4.7,
+    "reviews": 1543,
+    "tags": ["energy", "focus", "performance"],
+    "categoria_seo": "suplementos-pre-treino",
+    "estoque": 78,
+    "peso": 300,
+    "caracteristicas": ["300mg Cafeína", "Beta-Alanina", "Citrulina", "Taurina", "Foco Extremo"],
+    "pontos_compra": 11990
+  },
+  {
+    "id": "p_07",
+    "slug": "conjunto-feminino-fitness",
+    "nome": "Conjunto Feminino Fitness Pro",
+    "categoria": "Vestuário",
+    "marca": "Muscle Women",
+    "preco": 159.90,
+    "precoPromocional": 119.90,
+    "descricao": "Conjunto completo: top esportivo com suporte médio + legging high waist com tecnologia anti-celulite.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1506629905880-b2ce8dba2774?w=500",
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500"
+    ],
+    "variacoes": {
+      "tamanhos": ["PP", "P", "M", "G", "GG"],
+      "cores": ["preto", "rosa-neon", "azul-royal", "branco", "cinza-mescla"]
+    },
+    "avaliacao": 4.8,
+    "reviews": 1876,
+    "tags": ["promo", "feminino", "conjunto", "anti-celulite"],
+    "categoria_seo": "vestuario-feminino",
+    "estoque": 145,
+    "peso": 200,
+    "caracteristicas": ["Suporte Médio", "High Waist", "Anti-Celulite", "Dry-Fit", "Modelador"],
+    "pontos_compra": 11990
+  },
+  {
+    "id": "p_08",
+    "slug": "bcaa-recovery-240caps",
+    "nome": "BCAA Recovery 2:1:1 - 240 Cáps",
+    "categoria": "Suplementos",
+    "marca": "Muscle Amino",
+    "preco": 89.90,
+    "precoPromocional": 69.90,
+    "descricao": "Aminoácidos essenciais na proporção ideal 2:1:1 para máxima recuperação muscular e anti-catabolismo.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500"
+    ],
+    "variacoes": {
+      "quantidade": ["120 cápsulas", "240 cápsulas", "360 cápsulas"]
+    },
+    "avaliacao": 4.6,
+    "reviews": 756,
+    "tags": ["promo", "recovery", "anti-catabolico"],
+    "categoria_seo": "suplementos-aminoacidos",
+    "estoque": 198,
+    "peso": 200,
+    "caracteristicas": ["Proporção 2:1:1", "L-Leucina", "L-Isoleucina", "L-Valina", "240 Doses"],
+    "pontos_compra": 6990
+  },
+  {
+    "id": "p_09",
+    "slug": "shaker-premium-inox",
+    "nome": "Shaker Premium Inox 800ml",
+    "categoria": "Acessórios",
+    "marca": "Muscle Gear",
+    "preco": 79.90,
+    "precoPromocional": 59.90,
+    "descricao": "Shaker em aço inox com isolamento térmico, misturador em mola e compartimento para suplementos.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1582719471137-c3967cfb1071?w=500"
+    ],
+    "variacoes": {
+      "cores": ["preto-fosco", "prata", "azul-metalico"],
+      "capacidade": ["600ml", "800ml", "1L"]
+    },
+    "avaliacao": 4.9,
+    "reviews": 2134,
+    "tags": ["promo", "premium", "inox", "termico"],
+    "categoria_seo": "acessorios-shaker",
+    "estoque": 267,
+    "peso": 300,
+    "caracteristicas": ["Aço Inox", "Isolamento Térmico", "Mola Inox", "Compartimento Extra", "Livre BPA"],
+    "pontos_compra": 5990
+  },
+  {
+    "id": "p_10",
+    "slug": "multivitaminico-complete",
+    "nome": "Multivitamínico Complete A-Z",
+    "categoria": "Suplementos",
+    "marca": "Muscle Health",
+    "preco": 99.90,
+    "precoPromocional": null,
+    "descricao": "Fórmula completa com 27 vitaminas e minerais essenciais para atletas. Suporte imunológico e energético.",
+    "imagens": [
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500"
+    ],
+    "variacoes": {
+      "quantidade": ["60 cápsulas", "120 cápsulas"]
+    },
+    "avaliacao": 4.5,
+    "reviews": 543,
+    "tags": ["saude", "imunidade", "energia"],
+    "categoria_seo": "suplementos-vitaminas",
+    "estoque": 89,
+    "peso": 150,
+    "caracteristicas": ["27 Nutrientes", "Suporte Imunológico", "Energia", "Antioxidantes", "Para Atletas"],
+    "pontos_compra": 9990
+  }
+  {
+    "id": 2,
+    "slug": "creatina",
+    "nome": "Creatina Monohidratada 300g",
+    "marca": "Growth",
+    "descricao": "Creatina pura 100% monohidratada para ganho de força e massa muscular",
+    "preco": 49.90,
+    "precoAntigo": null,
+    "desconto": null,
+    "promocao": false,
+    "categoria": "suplementos",
+    "imagem": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=300&fit=crop",
+    "sabores": ["Sem sabor"],
+    "tamanhos": [
+      {"peso": "300g", "preco": 49.90},
+      {"peso": "500g", "preco": 79.90}
+    ],
+    "pontos": null,
+    "estoque": 60,
+    "avaliacoes": 892
+  },
+  {
+    "id": 3,
+    "slug": "bcaa",
+    "nome": "BCAA 2:1:1 120 Cápsulas",
+    "marca": "Max Titanium",
+    "descricao": "Aminoácidos essenciais de cadeia ramificada para recuperação muscular",
+    "preco": 67.90,
+    "precoAntigo": 89.90,
+    "desconto": 24,
+    "promocao": true,
+    "categoria": "suplementos",
+    "imagem": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+    "sabores": ["Cápsulas"],
+    "tamanhos": [
+      {"peso": "120 caps", "preco": 67.90},
+      {"peso": "240 caps", "preco": 119.90}
+    ],
+    "pontos": 62,
+    "estoque": 32,
+    "avaliacoes": 634
+  },
+  {
+    "id": 4,
+    "slug": "pre-treino",
+    "nome": "Pré-Treino Hardcore 300g",
+    "marca": "Max Titanium",
+    "descricao": "Fórmula avançada com cafeína, beta-alanina e arginina para máxima performance",
+    "preco": 89.90,
+    "precoAntigo": null,
+    "desconto": null,
+    "promocao": false,
+    "categoria": "suplementos",
+    "imagem": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    "sabores": ["Frutas Vermelhas", "Limão", "Uva"],
+    "tamanhos": [
+      {"peso": "300g", "preco": 89.90},
+      {"peso": "600g", "preco": 159.90}
+    ],
+    "pontos": null,
+    "estoque": 18,
+    "avaliacoes": 456
+  },
+  {
+    "id": 5,
+    "slug": "multivitaminico",
+    "nome": "Multivitamínico Complete",
+    "marca": "Integralmedica",
+    "descricao": "Complexo vitamínico completo com 24 nutrientes essenciais",
+    "preco": 79.90,
+    "precoAntigo": null,
+    "desconto": null,
+    "promocao": false,
+    "categoria": "suplementos",
+    "imagem": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop",
+    "sabores": ["Cápsulas"],
+    "tamanhos": [
+      {"peso": "60 caps", "preco": 79.90},
+      {"peso": "120 caps", "preco": 139.90}
+    ],
+    "pontos": null,
+    "estoque": 45,
+    "avaliacoes": 234
+  },
+  {
+    "id": 6,
+    "slug": "albumina",
+    "nome": "Albumina 500g",
+    "marca": "Naturovos - Natural",
+    "descricao": "Proteína de alta qualidade extraída da clara do ovo",
+    "preco": 49.90,
+    "precoAntigo": 58.90,
+    "desconto": 15,
+    "promocao": true,
+    "categoria": "suplementos",
+    "imagem": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    "sabores": ["Chocolate", "Morango", "Baunilha"],
+    "tamanhos": [
+      {"peso": "500g", "preco": 49.90},
+      {"peso": "1kg", "preco": 89.90}
+    ],
+    "pontos": 49,
+    "estoque": 30,
+    "avaliacoes": 544
+  },
+  {
+    "id": 7,
+    "slug": "glutamina",
+    "nome": "Glutamina 300g",
+    "marca": "Growth",
+    "descricao": "L-Glutamina pura para recuperação e sistema imunológico",
+    "preco": 69.90,
+    "precoAntigo": null,
+    "desconto": null,
+    "promocao": false,
+    "categoria": "suplementos",
+    "imagem": "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=400&h=300&fit=crop",
+    "sabores": ["Sem sabor"],
+    "tamanhos": [
+      {"peso": "300g", "preco": 69.90},
+      {"peso": "600g", "preco": 119.90}
+    ],
+    "pontos": null,
+    "estoque": 22,
+    "avaliacoes": 167
+  },
+  {
+    "id": 8,
+    "slug": "nike-tenis",
+    "nome": "Tênis Nike Revolution 6",
+    "marca": "Nike",
+    "descricao": "Tênis esportivo com amortecimento e design moderno para corrida e treino",
+    "preco": 299.90,
+    "precoAntigo": 399.90,
+    "desconto": 25,
+    "promocao": true,
+    "categoria": "tenis",
+    "imagem": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop",
+    "sabores": ["Preto", "Branco", "Azul"],
+    "tamanhos": [
+      {"peso": "39", "preco": 299.90},
+      {"peso": "40", "preco": 299.90},
+      {"peso": "41", "preco": 299.90},
+      {"peso": "42", "preco": 299.90}
+    ],
+    "pontos": 2399,
+    "estoque": 15,
+    "avaliacoes": 289
+  },
+  {
+    "id": 9,
+    "slug": "halter",
+    "nome": "Halter Ajustável 24kg",
+    "marca": "Kikos",
+    "descricao": "Conjunto de halteres ajustáveis com anilhas removíveis",
+    "preco": 189.90,
+    "precoAntigo": null,
+    "desconto": null,
+    "promocao": false,
+    "categoria": "equipamentos",
+    "imagem": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=300&fit=crop",
+    "sabores": ["Preto"],
+    "tamanhos": [
+      {"peso": "24kg", "preco": 189.90},
+      {"peso": "40kg", "preco": 289.90}
+    ],
+    "pontos": null,
+    "estoque": 8,
+    "avaliacoes": 145
+  },
+  {
+    "id": 10,
+    "slug": "elasticos",
+    "nome": "Kit Elásticos de Resistência",
+    "marca": "Acte Sports",
+    "descricao": "Conjunto completo com 5 elásticos de diferentes resistências",
+    "preco": 59.90,
+    "precoAntigo": null,
+    "desconto": null,
+    "promocao": false,
+    "categoria": "equipamentos",
+    "imagem": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    "sabores": ["Colorido"],
+    "tamanhos": [
+      {"peso": "Kit 5 peças", "preco": 59.90}
+    ],
+    "pontos": null,
+    "estoque": 25,
+    "avaliacoes": 456
+  },
+  {
+    "id": 11,
+    "slug": "adidas-tenis",
+    "nome": "Tênis Adidas Ultraboost",
+    "marca": "Adidas",
+    "descricao": "Tênis premium com tecnologia Boost para máximo conforto",
+    "preco": 549.90,
+    "precoAntigo": null,
+    "desconto": null,
+    "promocao": false,
+    "categoria": "tenis",
+    "imagem": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop",
+    "sabores": ["Preto", "Branco", "Cinza"],
+    "tamanhos": [
+      {"peso": "39", "preco": 549.90},
+      {"peso": "40", "preco": 549.90},
+      {"peso": "41", "preco": 549.90},
+      {"peso": "42", "preco": 549.90}
+    ],
+    "pontos": null,
+    "estoque": 12,
+    "avaliacoes": 678
+  },
+  {
+    "id": 12,
+    "slug": "camiseta",
+    "nome": "Camiseta Dry-Fit Pro",
+    "marca": "Under Armour",
+    "descricao": "Camiseta esportiva com tecnologia dry-fit para treinos intensos",
+    "preco": 89.90,
+    "precoAntigo": null,
+    "desconto": null,
+    "promocao": false,
+    "categoria": "roupas",
+    "imagem": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop",
+    "sabores": ["Preto", "Branco", "Azul", "Vermelho"],
+    "tamanhos": [
+      {"peso": "P", "preco": 89.90},
+      {"peso": "M", "preco": 89.90},
+      {"peso": "G", "preco": 89.90},
+      {"peso": "GG", "preco": 89.90}
+    ],
+    "pontos": null,
+    "estoque": 40,
+    "avaliacoes": 123
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "pr_001",
+    "nome": "Dr. Carlos Eduardo Silva",
+    "especialidade": "Nutricionista Esportivo",
+    "registro": "CRN-3 12345/SP",
+    "nota": 4.9,
+    "preco": 250,
+    "preco_online": 180,
+    "cidade": "São Paulo/SP",
+    "estado": "SP",
+    "foto": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face",
+    "bio": "Especialista em nutrição esportiva com mais de 12 anos de experiência. Doutor em Ciências da Nutrição pela USP. Atendimento focado em performance e composição corporal.",
+    "formacoes": [
+      "Nutrição - Universidade de São Paulo (USP)",
+      "Mestrado em Nutrição Esportiva - UNIFESP", 
+      "Doutorado em Ciências da Nutrição - USP",
+      "Especialização em Suplementação Esportiva"
+    ],
+    "certificacoes": [
+      "Certified Sports Nutritionist (ISSN)",
+      "Nutrição Funcional (VP)",
+      "Metabolismo e Emagrecimento"
+    ],
+    "especialidades": ["Hipertrofia", "Emagrecimento", "Performance", "Suplementação"],
+    "atendimento": ["online", "presencial"],
+    "match_tags": ["ganho_massa", "perda_gordura", "performance", "suplementos"],
+    "casos_sucesso": 847,
+    "tempo_experiencia": 12,
+    "avaliacao_detalhes": {
+      "total": 4.9,
+      "conhecimento": 4.9,
+      "pontualidade": 5.0,
+      "comunicacao": 4.8,
+      "resultados": 4.9
+    },
+    "disponibilidade": {
+      "dias": ["segunda", "terca", "quarta", "quinta", "sexta"],
+      "horarios": ["08:00-12:00", "14:00-18:00"]
+    },
+    "preco_consulta_seguimento": 150,
+    "planos_aceitos": ["premium", "pro", "elite"]
+  },
+  {
+    "id": "pr_002",
+    "nome": "Prof. Ana Carolina Ferreira",
+    "especialidade": "Personal Trainer",
+    "registro": "CREF 045678-G/SP",
+    "nota": 4.8,
+    "preco": 200,
+    "preco_online": 120,
+    "cidade": "Campinas/SP",
+    "estado": "SP",
+    "foto": "https://images.unsplash.com/photo-1594824723111-48f0493b29b1?w=300&h=300&fit=crop&crop=face",
+    "bio": "Personal trainer especializada em treinamento funcional e musculação feminina. Experiência com atletas de alto rendimento e transformações corporais.",
+    "formacoes": [
+      "Educação Física - UNICAMP",
+      "Pós-graduação em Treinamento Desportivo",
+      "Especialização em Treinamento Feminino"
+    ],
+    "certificacoes": [
+      "Personal Trainer Certificado (ACSM)",
+      "Functional Training Specialist",
+      "Pilates Clínico"
+    ],
+    "especialidades": ["Funcional", "Musculação Feminina", "Emagrecimento", "Condicionamento"],
+    "atendimento": ["presencial", "online"],
+    "match_tags": ["treino_funcional", "feminino", "emagrecimento", "condicionamento"],
+    "casos_sucesso": 523,
+    "tempo_experiencia": 8,
+    "avaliacao_detalhes": {
+      "total": 4.8,
+      "conhecimento": 4.7,
+      "pontualidade": 4.9,
+      "comunicacao": 4.8,
+      "resultados": 4.8
+    }
+  },
+  {
+    "id": "pr_003",
+    "nome": "Dr. Roberto Almeida",
+    "especialidade": "Fisioterapeuta Esportivo",
+    "registro": "CREFITO-3 78945/F",
+    "nota": 4.7,
+    "preco": 280,
+    "preco_online": 200,
+    "cidade": "Rio de Janeiro/RJ", 
+    "estado": "RJ",
+    "foto": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face",
+    "bio": "Fisioterapeuta especializado em reabilitação esportiva e prevenção de lesões. Trabalha com atletas profissionais e amadores.",
+    "formacoes": [
+      "Fisioterapia - UFRJ",
+      "Especialização em Fisioterapia Esportiva",
+      "Mestrado em Reabilitação"
+    ],
+    "especialidades": ["Reabilitação", "Prevenção de Lesões", "Dor Crônica", "Postura"],
+    "atendimento": ["presencial", "online"],
+    "match_tags": ["lesao", "dor", "reabilitacao", "postura"],
+    "casos_sucesso": 1247,
+    "tempo_experiencia": 15
+  }
+]
