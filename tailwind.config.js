@@ -41,15 +41,26 @@ module.exports = {
         },
         yellow: {
           500: '#f59e0b', // Amarelo para avisos
+        },
+        elite: {
+          bg: '#0f0f23',
+          surface: '#1a1a2e',
+          primary: '#ffd700',
+          secondary: '#ffed4a',
+          text: '#ffffff',
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'bounce-in': 'bounceIn 0.6s ease-out',
+        'bounce-gentle': 'bounceGentle 2s infinite',
+        'pulse-slow': 'pulse 3s infinite',
+        'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -66,8 +77,19 @@ module.exports = {
           '70%': { transform: 'scale(0.9)' },
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
+        bounceGentle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        }
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
+  darkMode: 'class',
 };
