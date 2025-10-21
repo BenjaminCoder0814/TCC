@@ -29,7 +29,7 @@ export default function MeuPerfil() {
   const [salvo, setSalvo] = useState(false);
   
   const [perfil, setPerfil] = useState({
-    nome: user?.nome || 'João Silva',
+    nome: user?.name || 'João Silva',
     email: user?.email || 'joao@exemplo.com',
     telefone: '(11) 99999-9999',
     dataNascimento: '1990-05-15',
