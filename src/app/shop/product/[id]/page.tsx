@@ -39,7 +39,7 @@ export default function ProductPage() {
   const [activeTab, setActiveTab] = useState('description')
   
   const addToCart = useCartStore(state => state.addItem)
-  const { favorites, addToFavorites, removeFromFavorites } = useFavoritesStore()
+  const { products: favorites, addProduct: addToFavorites, removeProduct: removeFromFavorites, isProductFavorited } = useFavoritesStore()
   
   useEffect(() => {
     const foundProduct = PRODUCTS.find(p => p.id === productId)
@@ -62,7 +62,7 @@ export default function ProductPage() {
     )
   }
 
-  const isFavorite = favorites.some(fav => fav.id === product.id)
+  const isFavorite = isProductFavorited(product.id)
   const relatedProducts = PRODUCTS.filter(p => 
     p.category === product.category && p.id !== product.id
   ).slice(0, 8)
