@@ -213,30 +213,36 @@ export default function AssessmentPage() {
                       <div className="space-y-3">
                         <div className="flex justify-between">
                           <span className="text-gray-600">IMC:</span>
-                          <span className="font-semibold">
-                            {(assessmentData.personalInfo.weight / 
-                              Math.pow(assessmentData.personalInfo.height / 100, 2)).toFixed(1)}
+                          <span className="font-semibold text-gray-900">
+                            {assessmentData.personalInfo.height > 0 && assessmentData.personalInfo.weight > 0
+                              ? (assessmentData.personalInfo.weight / 
+                                  Math.pow(assessmentData.personalInfo.height / 100, 2)).toFixed(1)
+                              : '-'}
                           </span>
                         </div>
                         
                         <div className="flex justify-between">
                           <span className="text-gray-600">Nível de Atividade:</span>
-                          <span className="font-semibold capitalize">
-                            {assessmentData.personalInfo.activityLevel.replace('_', ' ')}
+                          <span className="font-semibold text-gray-900 capitalize">
+                            {assessmentData.personalInfo.activityLevel 
+                              ? assessmentData.personalInfo.activityLevel.replace('_', ' ')
+                              : '-'}
                           </span>
                         </div>
                         
                         <div className="flex justify-between">
                           <span className="text-gray-600">Experiência:</span>
-                          <span className="font-semibold capitalize">
-                            {assessmentData.experience.level}
+                          <span className="font-semibold text-gray-900 capitalize">
+                            {assessmentData.experience.level || '-'}
                           </span>
                         </div>
                         
                         <div className="flex justify-between">
                           <span className="text-gray-600">Treinos por Semana:</span>
-                          <span className="font-semibold">
-                            {assessmentData.experience.daysPerWeek} dias
+                          <span className="font-semibold text-gray-900">
+                            {assessmentData.experience.daysPerWeek > 0 
+                              ? `${assessmentData.experience.daysPerWeek} dias`
+                              : '-'}
                           </span>
                         </div>
                       </div>

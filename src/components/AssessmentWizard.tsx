@@ -342,7 +342,7 @@ function BodyCompositionStep({ data, onChange }: any) {
         <div className="space-y-4">
           {muscleGroups.map((group) => (
             <div key={group.key} className="flex items-center justify-between">
-              <span className="font-medium">{group.label}</span>
+              <span className="font-medium text-gray-900">{group.label}</span>
               <div className="flex items-center space-x-2">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
                   <button
@@ -357,7 +357,7 @@ function BodyCompositionStep({ data, onChange }: any) {
                     className={`w-8 h-8 rounded-full border-2 transition-all ${
                       data.bodyComposition.muscleGroups[group.key] >= level
                         ? 'bg-blue-500 border-blue-500 text-white'
-                        : 'border-gray-300 hover:border-blue-300'
+                        : 'border-gray-300 hover:border-blue-300 text-gray-700 bg-white'
                     }`}
                   >
                     {level}
@@ -427,15 +427,15 @@ export default function AssessmentWizard({ onComplete }: { onComplete: (data: As
     },
     bodyComposition: {
       muscleGroups: {
-        chest: 5,
-        back: 5,
-        shoulders: 5,
-        arms: 5,
-        legs: 5,
-        core: 5
+        chest: 0,
+        back: 0,
+        shoulders: 0,
+        arms: 0,
+        legs: 0,
+        core: 0
       },
-      bodyFat: 15,
-      flexibility: 5
+      bodyFat: 0,
+      flexibility: 0
     }
   })
 
