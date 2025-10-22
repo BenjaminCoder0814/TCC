@@ -1,20 +1,21 @@
-// Importações serão adicionadas depois quando tivermos os dados mock
-import type { Product } from '@/data/products';
-import type { Professional } from '@/data/professionals';
-import type { Post } from '@/data/posts';
+// Importações dos tipos de dados
+import type { Product } from '../lib/types';
 
-export function globalSearch(query: string, products: Product[] = [], pros: Professional[] = [], posts: Post[] = []) {
+export function searchProducts(products: Product[], query: string): Product[] {
+  if (!query.trim()) return products;
+  
+  const q = query.toLowerCase();
+  return products.filter(p => 
+    [p.title, p.category, p.description, p.tags?.join(' ')].join(' ').toLowerCase().includes(q)
+  );
+}
+
+export function globalSearch(query: string, products: Product[] = []) {
   const q = query.toLowerCase();
   const filteredProducts = products.filter(p => 
-    [p.name, p.category, p.tags?.join(' ')].join(' ').toLowerCase().includes(q)
+    [p.title, p.category, p.description, p.tags?.join(' ')].join(' ').toLowerCase().includes(q)
   );
-  const filteredPros = pros.filter(p => 
-    [p.name, p.specialty, p.city, p.state].join(' ').toLowerCase().includes(q)
-  );
-  const filteredPosts = posts.filter(p => 
-    [p.title, p.tags?.join(' ')].join(' ').toLowerCase().includes(q)
-  );
-  return { products: filteredProducts, pros: filteredPros, posts: filteredPosts };
+  return { products: filteredProducts };
 }
 
 export function formatSearchQuery(query: string): string {

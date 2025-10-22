@@ -1,224 +1,304 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useAuth } from '@/contexts/AuthContext';
-import { useCart } from '@/contexts/CartContext';
-import LoginModal from './LoginModal';
+import { useRouter } from 'next/navigation';
+import { 
+  Search, 
+  ShoppingCart, 
+  User, 
+  Heart, 
+  Menu, 
+  Bell,
+  LogOut,
+  Settings
+} from 'lucide-react';
+import { useAuthStore } from '../stores/authStore';
+import { useCartStore } from '../stores/cartStore';
+import { useFavoritesStore } from '../stores/favoritesStore';
+import { useUIStore } from '../stores/uiStore';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
-  const { user, isAuthenticated, logout } = useAuth();
-  const { totalItems } = useCart();
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+  const { user, isAuthenticated, logout } = useAuthStore();
+  const { getTotalItems } = useCartStore();
+  const { getFavoritesCount } = useFavoritesStore();
+  const { 
+    searchQuery, 
+    setSearchQuery, 
+    toggleSidebar,
+    theme,
+    toggleTheme 
+  } = useUIStore();
 
-  const handleLoginClick = () => {
-    if (!isAuthenticated) {
-      setShowLoginModal(true);
+  const [showUserMenu, setShowUserMenu] = React.useState(false);
+  const [showMobileMenu, setShowMobileMenu] = React.useState(false);
+
+  const cartItemsCount = getTotalItems();
+  const favoritesCount = getFavoritesCount();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
     }
   };
 
   const handleLogout = () => {
     logout();
-    setIsMenuOpen(false);
+    setShowUserMenu(false);
+    router.push('/');
   };
 
   return (
-    <>
-      <header className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <i className="fas fa-dumbbell text-white text-lg"></i>
+    <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          
+          {/* Logo */}
+          <div className="flex items-center">
+            <button
+              onClick={toggleSidebar}
+              className="lg:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
+            
+            <Link href="/" className="flex items-center ml-2 lg:ml-0">
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                MUSCLE LEVELS
               </div>
-              <span className="text-xl font-bold text-gradient-primary">
-                Muscle Levels
-              </span>
+            </Link>
+          </div>
+
+          {/* Navigation Desktop */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            <Link 
+              href="/assessment"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
+            >
+              Avaliação
+            </Link>
+            <Link 
+              href="/professionals"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
+            >
+              Profissionais
+            </Link>
+            <Link 
+              href="/shop"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
+            >
+              Loja
+            </Link>
+            <Link 
+              href="/gyms"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
+            >
+              Academias
+            </Link>
+            <Link 
+              href="/blog"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
+            >
+              Blog
+            </Link>
+          </nav>
+
+          {/* Search Bar */}
+          <div className="hidden md:block flex-1 max-w-lg mx-8">
+            <form onSubmit={handleSearch} className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Buscar produtos, profissionais..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </form>
+          </div>
+
+          {/* Actions */}
+          <div className="flex items-center space-x-4">
+            
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              {theme === 'light' ? '🌙' : '☀️'}
+            </button>
+
+            {/* Favorites */}
+            <Link 
+              href="/favorites"
+              className="relative p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              <Heart className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+              {favoritesCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {favoritesCount}
+                </span>
+              )}
             </Link>
 
-            {/* Navigation Desktop */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/loja" className="text-gray-700 hover:text-primary-500 transition-colors">
-                Loja
-              </Link>
-              <Link href="/profissionais" className="text-gray-700 hover:text-primary-500 transition-colors">
-                Profissionais
-              </Link>
-              <Link href="/triagem" className="text-gray-700 hover:text-primary-500 transition-colors">
-                Avaliação
-              </Link>
-              <Link href="/ranking" className="text-gray-700 hover:text-primary-500 transition-colors">
-                Ranking
-              </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-primary-500 transition-colors">
-                Blog
-              </Link>
-            </nav>
+            {/* Cart */}
+            <Link 
+              href="/cart"
+              className="relative p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              <ShoppingCart className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+              {cartItemsCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {cartItemsCount}
+                </span>
+              )}
+            </Link>
 
-            {/* User Actions */}
-            <div className="flex items-center space-x-4">
-              {/* Search */}
-              <div className="hidden md:block relative">
-                <input
-                  type="text"
-                  placeholder="Buscar..."
-                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500"
-                />
-                <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-              </div>
+            {/* Notifications */}
+            <button className="relative p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+              <Bell className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+              <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-2 h-2"></span>
+            </button>
 
-              {/* Cart */}
-              <Link href="/carrinho" className="relative">
-                <i className="fas fa-shopping-cart text-gray-700 text-xl hover:text-primary-500 transition-colors"></i>
-                {totalItems > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                    {totalItems}
+            {/* User Menu */}
+            {isAuthenticated ? (
+              <div className="relative">
+                <button
+                  onClick={() => setShowUserMenu(!showUserMenu)}
+                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                >
+                  <img
+                    src={user?.avatar || '/default-avatar.png'}
+                    alt={user?.name}
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
+                  <span className="hidden md:block text-sm font-medium text-gray-700 dark:text-gray-300">
+                    {user?.name}
                   </span>
-                )}
-              </Link>
+                </button>
 
-              {/* Favorites */}
-              <Link href="/favoritos" className="hidden md:block">
-                <i className="fas fa-heart text-gray-700 text-xl hover:text-primary-500 transition-colors"></i>
-              </Link>
-
-              {/* User Menu */}
-              {isAuthenticated && user ? (
-                <div className="relative">
-                  <button
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="flex items-center space-x-2 focus:outline-none"
-                  >
-                    {user.avatar ? (
-                      <img
-                        src={user.avatar}
-                        alt={user.name}
-                        className="w-8 h-8 rounded-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-medium">
-                          {user.name.charAt(0).toUpperCase()}
-                        </span>
-                      </div>
-                    )}
-                    <span className="hidden md:block text-gray-700 font-medium">
-                      {user.name}
-                    </span>
-                    <span className="bg-primary-100 text-primary-800 px-2 py-1 rounded-full text-xs font-medium">
-                      {user.points} pts
-                    </span>
-                  </button>
-
-                  {/* Dropdown Menu */}
-                  {isMenuOpen && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border z-50">
+                <AnimatePresence>
+                  {showUserMenu && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1"
+                    >
                       <Link
-                        href="/perfil"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                        onClick={() => setIsMenuOpen(false)}
+                        href="/profile"
+                        className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        onClick={() => setShowUserMenu(false)}
                       >
-                        <i className="fas fa-user mr-2"></i>
+                        <User className="w-4 h-4 mr-2" />
                         Meu Perfil
                       </Link>
                       <Link
-                        href="/meus-pedidos"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                        onClick={() => setIsMenuOpen(false)}
+                        href="/settings"
+                        className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        onClick={() => setShowUserMenu(false)}
                       >
-                        <i className="fas fa-box mr-2"></i>
-                        Meus Pedidos
-                      </Link>
-                      <Link
-                        href="/configuracoes"
-                        className="block px-4 py-2 text-gray-700 hover:bg-gray-50"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        <i className="fas fa-cog mr-2"></i>
+                        <Settings className="w-4 h-4 mr-2" />
                         Configurações
                       </Link>
-                      <hr className="my-1" />
+                      <hr className="my-1 border-gray-200 dark:border-gray-700" />
                       <button
                         onClick={handleLogout}
-                        className="block w-full text-left px-4 py-2 text-red-600 hover:bg-gray-50"
+                        className="flex items-center w-full px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
-                        <i className="fas fa-sign-out-alt mr-2"></i>
+                        <LogOut className="w-4 h-4 mr-2" />
                         Sair
                       </button>
-                    </div>
+                    </motion.div>
                   )}
-                </div>
-              ) : (
-                <button
-                  onClick={handleLoginClick}
-                  className="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors"
+                </AnimatePresence>
+              </div>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Link
+                  href="/login"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   Entrar
-                </button>
-              )}
-
-              {/* Mobile Menu Button */}
-              <button
-                className="md:hidden"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                <i className="fas fa-bars text-gray-700 text-xl"></i>
-              </button>
-            </div>
+                </Link>
+                <Link
+                  href="/register"
+                  className="px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Cadastrar
+                </Link>
+              </div>
+            )}
           </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 py-4">
-              <nav className="flex flex-col space-y-2">
-                <Link
-                  href="/loja"
-                  className="text-gray-700 hover:text-primary-500 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Loja
-                </Link>
-                <Link
-                  href="/profissionais"
-                  className="text-gray-700 hover:text-primary-500 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Profissionais
-                </Link>
-                <Link
-                  href="/triagem"
-                  className="text-gray-700 hover:text-primary-500 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Avaliação
-                </Link>
-                <Link
-                  href="/ranking"
-                  className="text-gray-700 hover:text-primary-500 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Ranking
-                </Link>
-                <Link
-                  href="/blog"
-                  className="text-gray-700 hover:text-primary-500 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Blog
-                </Link>
-              </nav>
-            </div>
-          )}
         </div>
-      </header>
 
-      {/* Login Modal */}
-      <LoginModal
-        isOpen={showLoginModal}
-        onClose={() => setShowLoginModal(false)}
-      />
-    </>
+        {/* Mobile Search */}
+        <div className="md:hidden pb-3">
+          <form onSubmit={handleSearch} className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Buscar..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </form>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {showMobileMenu && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
+          >
+            <nav className="px-4 py-4 space-y-2">
+              <Link
+                href="/assessment"
+                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                onClick={() => setShowMobileMenu(false)}
+              >
+                Avaliação
+              </Link>
+              <Link
+                href="/professionals"
+                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                onClick={() => setShowMobileMenu(false)}
+              >
+                Profissionais
+              </Link>
+              <Link
+                href="/shop"
+                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                onClick={() => setShowMobileMenu(false)}
+              >
+                Loja
+              </Link>
+              <Link
+                href="/gyms"
+                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                onClick={() => setShowMobileMenu(false)}
+              >
+                Academias
+              </Link>
+              <Link
+                href="/blog"
+                className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                onClick={() => setShowMobileMenu(false)}
+              >
+                Blog
+              </Link>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 }
