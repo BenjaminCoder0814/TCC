@@ -1,47 +1,89 @@
-# Muscle Levels - Aplicação Next.js + TypeScript
+# 💪 MUSCLE LEVELS - Next.js 14 Fitness Platform
+
+> **Plataforma profissional de fitness construída com Next.js 14, TypeScript e Tailwind CSS**
 
 ## 🚀 URLs de Produção
 
-### **URL Principal do Deploy:**
+### **URL Principal:**
 **https://muscle-levels-q9z94mk1w-benjamins-projects-869ffeff.vercel.app**
 
-### Links de Inspeção:
-- **Vercel Dashboard:** https://vercel.com/benjamins-projects-869ffeff/muscle-levels
+### **Acesso Local:**
+**http://localhost:3001** (quando rodando localmente)
 
 ---
 
-## 📱 Funcionalidades Implementadas
+## ✨ Funcionalidades Implementadas
 
-### ✅ Páginas Funcionais:
-1. **Home Page (/)** - Landing page com hero carousel e seções de produtos
-2. **Loja (/loja)** - Catálogo completo de produtos com filtros
-3. **Carrinho (/carrinho)** - Sistema de carrinho de compras funcional
-4. **Triagem (/triagem)** - Questionário de avaliação física
-5. **Profissionais (/profissionais)** - Listagem de profissionais da saúde
+### 🏪 **E-commerce Completo:**
+- **Loja (/shop)** - Catálogo com filtros por categoria
+- **Produtos individuais** - Páginas detalhadas com variações
+- **Carrinho** - Sistema completo com persistência
+- **Favoritos** - Lista de produtos salvos
+- **Checkout** - Processo de compra simulado
 
-### ✅ Componentes Principais:
-- **Header** - Navegação responsiva com carrinho e favoritos
-- **Footer** - Links e informações institucionais
-- **HeroCarousel** - Carrossel principal com Swiper.js
-- **ProductCard** - Cards de produtos com funcionalidades completas
-- **ProfessionalCard** - Cards de profissionais
-- **Carousels** - Componentes de carrossel reutilizáveis
+### 🏋️ **Fitness & Wellness:**
+- **Assessment (/assessment)** - Avaliação física personalizada
+- **Academias (/gyms)** - Directory com localização e serviços
+- **Profissionais (/professionals)** - Perfis especializados
+- **Ranking** - Sistema de pontuação e conquistas
+- **Blog** - Artigos e dicas especializadas
 
-### ✅ Sistema de Estado:
-- **AuthContext** - Gerenciamento de autenticação
-- **CartContext** - Carrinho de compras com persistência
-- **FavoritesContext** - Sistema de favoritos
+### 👤 **Sistema de Usuário:**
+- **Login (/login)** - Autenticação
+- **Perfil (/profile)** - Dashboard pessoal
+- **Planos** - Assinaturas e benefícios
+- **Pontos** - Sistema de gamificação
 
 ---
 
 ## 🛠️ Stack Tecnológica
 
-- **Next.js 14.2.5** - App Router
-- **TypeScript 5.x** - Tipagem estática
-- **Tailwind CSS 3.4.3** - Estilização
-- **Swiper.js** - Carrosséis interativos
-- **React Context API** - Gerenciamento de estado
-- **Vercel** - Deploy e hospedagem
+- **Next.js 14.2.5** - App Router com Server Components
+- **TypeScript 5.x** - Tipagem estática completa
+- **Tailwind CSS 3.4** - Utility-first CSS framework
+- **Zustand** - Gerenciamento de estado moderno
+- **Framer Motion** - Animações fluidas e performáticas
+- **Embla Carousel** - Carrosséis nativos otimizados
+- **Lucide React** - Ícones SVG modernos
+- **Fuse.js** - Busca inteligente e fuzzy search
+
+---
+
+## 📁 Arquitetura do Projeto
+
+```
+src/
+├── app/                    # Next.js 14 App Router
+│   ├── shop/              # 🛒 E-commerce
+│   │   ├── page.tsx       # Lista de produtos
+│   │   └── product/[id]/  # Produto individual
+│   ├── gyms/              # 🏋️ Academias
+│   ├── assessment/        # 📊 Avaliação física
+│   ├── profile/           # 👤 Perfil do usuário
+│   ├── login/             # 🔐 Autenticação
+│   └── ranking/           # 🏆 Sistema de ranking
+├── components/            # Componentes React
+│   ├── ProductCard.tsx    # Card de produto avançado
+│   ├── InfiniteCarousel.tsx # Carrossel infinito
+│   ├── AssessmentWizard.tsx # Wizard de avaliação
+│   ├── HeroSlider.tsx     # Slider principal
+│   └── TrainingBuilder.tsx # Construtor de treinos
+├── stores/               # Zustand State Management
+│   ├── cartStore.ts      # 🛒 Carrinho de compras
+│   ├── authStore.ts      # 🔐 Autenticação
+│   ├── favoritesStore.ts # ❤️ Favoritos
+│   ├── pointsStore.ts    # 🎯 Sistema de pontos
+│   └── chatStore.ts      # � Chat integrado
+├── data/                 # Dados estruturados
+│   ├── products.ts       # 🏷️ Catálogo de produtos
+│   ├── gyms.ts          # 🏢 Base de academias
+│   ├── professionals.ts  # 👨‍⚕️ Profissionais
+│   └── blog.ts          # 📝 Artigos do blog
+└── lib/                  # Utilitários e tipos
+    ├── types.ts         # 📋 Definições TypeScript
+    ├── search.ts        # 🔍 Engine de busca
+    └── utils.ts         # 🛠️ Funções auxiliares
+```
 
 ---
 
